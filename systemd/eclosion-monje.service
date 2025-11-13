@@ -1,0 +1,12 @@
+[Unit]
+Description=Eclosion Monje (Nucleo 1)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/cgexec -g cpuset:monje /opt/eclosion/venv/bin/python /opt/eclosion/bin/monje_pasivo.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

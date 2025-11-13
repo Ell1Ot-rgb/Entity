@@ -1,0 +1,12 @@
+[Unit]
+Description=Eclosion Mensajero (Baja Prioridad)
+After=eclosion-monje.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nice -n 19 /opt/eclosion/venv/bin/python /opt/eclosion/bin/mensajero_silencioso.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
