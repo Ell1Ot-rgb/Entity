@@ -1,0 +1,45 @@
+{
+  "model_config": {
+    "input_dim": 512,
+    "hidden_dim": 1024,
+    "num_layers": 6,
+    "thought_dim": 256,
+    "total_parameters": 76893187
+  },
+  "analysis_summary": {
+    "stability_mean": 0.23850720822811128,
+    "stability_std": 0.05882565320143894,
+    "complexity_mean": 6.433080371220907,
+    "complexity_std": 0.00144550716927797,
+    "variance_mean": 1.000968098640442,
+    "variance_std": 0.0
+  },
+  "verification_results": {
+    "stability": {
+      "current": 0.23850720822811128,
+      "within_range": true,
+      "optimal_distance": 0.011492791771888722,
+      "status": "\u2705 \u00d3PTIMO"
+    },
+    "complexity": {
+      "current": 6.433080371220907,
+      "within_range": true,
+      "optimal_distance": 0.06691962877909319,
+      "status": "\u2705 \u00d3PTIMO"
+    },
+    "variance": {
+      "current": 1.000968098640442,
+      "within_range": true,
+      "optimal_distance": 0.0009680986404418945,
+      "status": "\u2705 \u00d3PTIMO"
+    }
+  },
+  "metadata": {
+    "timestamp": "2026-06-04T03:47:39.470784",
+    "specialist": "ctm-sakai-manager",
+    "tag": "dkeekwwk.ctm_sakai",
+    "paper_reference": "Sakana AI - Continuous Thought Machines",
+    "github_repo": "Ell1Ot-rgb/Entity",
+    "checkpoint_type": "lightweight_optimized"
+  }
+}
