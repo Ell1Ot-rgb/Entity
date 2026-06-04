@@ -1,0 +1,94 @@
+{
+  "dual_vector_sequences": {
+    "name": "Dual Vector Sequences Dataset (DVSD)",
+    "size": "5M sequences",
+    "description": "Pares de vectores neuronales y fenomenol\u00f3gicos sincronizados",
+    "format": "Pares (V_neuro[256], V_phenom[256]) con etiquetas temporales",
+    "compatibility_score": 95,
+    "optimal_for": [
+      "dual_vector_processing",
+      "synchronization_learning"
+    ],
+    "preprocessing": "Normalizaci\u00f3n L2 + Augmentaci\u00f3n temporal",
+    "file_structure": {
+      "train": "dvsd_train.h5",
+      "val": "dvsd_val.h5",
+      "test": "dvsd_test.h5"
+    },
+    "data_schema": {
+      "vector_neuro": "float32[256]",
+      "vector_phenom": "float32[256]",
+      "timestamp": "int64",
+      "sync_label": "float32"
+    }
+  },
+  "markovian_memory_tasks": {
+    "name": "Markovian Memory Tasks Dataset (MMTD)",
+    "size": "3M episodes",
+    "description": "Tareas que requieren memoria hist\u00f3rica markoviana",
+    "format": "Secuencias con dependencias temporales de longitud variable",
+    "compatibility_score": 92,
+    "optimal_for": [
+      "memory_buffer_training",
+      "lstm_optimization"
+    ],
+    "preprocessing": "Padding din\u00e1mico + Masking temporal",
+    "file_structure": {
+      "train": "mmtd_train.parquet",
+      "val": "mmtd_val.parquet",
+      "test": "mmtd_test.parquet"
+    },
+    "data_schema": {
+      "sequence": "list[float32[256]]",
+      "sequence_length": "int32",
+      "memory_target": "float32[16]",
+      "episode_id": "string"
+    }
+  },
+  "continuous_thought_streams": {
+    "name": "Continuous Thought Streams Dataset (CTSD)",
+    "size": "8M streams",
+    "description": "Flujos de pensamiento continuo sint\u00e9ticos",
+    "format": "Secuencias de estados cognitivos temporales",
+    "compatibility_score": 93,
+    "optimal_for": [
+      "recurrent_processing",
+      "thought_continuity"
+    ],
+    "preprocessing": "Segmentaci\u00f3n temporal + Normalizaci\u00f3n de estados",
+    "file_structure": {
+      "train": "ctsd_train.h5",
+      "val": "ctsd_val.h5",
+      "test": "ctsd_test.h5"
+    },
+    "data_schema": {
+      "thought_stream": "float32[T, 256]",
+      "continuity_score": "float32",
+      "stream_id": "string",
+      "ticks_count": "int32"
+    }
+  },
+  "entropy_certainty_dataset": {
+    "name": "Entropy-Certainty Calibration Dataset (ECCD)",
+    "size": "4M samples",
+    "description": "Activaciones neuronales con certezas calibradas",
+    "format": "Vectores de activaci\u00f3n + certeza objetivo normalizada",
+    "compatibility_score": 90,
+    "optimal_for": [
+      "entropy_calculation",
+      "adaptive_halting"
+    ],
+    "preprocessing": "Softmax + Normalizaci\u00f3n de entrop\u00eda",
+    "file_structure": {
+      "train": "eccd_train.npz",
+      "val": "eccd_val.npz",
+      "test": "eccd_test.npz"
+    },
+    "data_schema": {
+      "activations": "float32[512]",
+      "target_certainty": "float32",
+      "entropy_normalized": "float32",
+      "sample_id": "int64"
+    }
+  }
+}
