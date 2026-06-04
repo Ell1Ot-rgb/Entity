@@ -1,0 +1,26 @@
+{
+  "ctm_sakai_analysis": {
+    "timestamp": "2026-06-04T03:43:17.991340",
+    "model_parameters": 76893187,
+    "metrics": {
+      "stability": {
+        "mean": 0.23850720822811128,
+        "std": 0.05882565320143894
+      },
+      "complexity": {
+        "mean": 6.433080371220907,
+        "std": 0.00144550716927797
+      },
+      "variance": {
+        "mean": 1.000968098640442,
+        "std": 0.0
+      }
+    },
+    "verification": {
+      "stability": "\u2705 \u00d3PTIMO",
+      "complexity": "\u2705 \u00d3PTIMO",
+      "variance": "\u2705 \u00d3PTIMO"
+    },
+    "paper_compliance": 3
+  }
+}
