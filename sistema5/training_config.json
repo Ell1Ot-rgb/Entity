@@ -1,0 +1,34 @@
+{
+  "model_config": {
+    "input_dim": 256,
+    "hidden_dim": 512,
+    "num_heads": 8,
+    "num_layers": 4,
+    "sync_dim": 32,
+    "dropout": 0.1,
+    "certainty_threshold": 0.85
+  },
+  "training_config": {
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "num_epochs": 100,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "gradient_clip": 1.0
+  },
+  "dataset_config": {
+    "primary_dataset": "dual_vector_sequences",
+    "secondary_datasets": [
+      "continuous_thought_streams",
+      "markovian_memory_tasks"
+    ],
+    "train_split": 0.8,
+    "val_split": 0.1,
+    "test_split": 0.1
+  },
+  "hardware_recommendations": {
+    "minimum": "XSMALL_GPU",
+    "recommended": "MEDIUM_GPU",
+    "optimal": "LARGE_GPU"
+  }
+}
